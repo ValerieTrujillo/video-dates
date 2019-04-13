@@ -78,7 +78,6 @@ class FileUpload extends Component {
           }
           alt="Uploaded Images"
           height="300"
-          width="400"
         />
       </div>
     );
