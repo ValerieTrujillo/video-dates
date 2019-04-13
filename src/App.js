@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import LandingPage from './landingpage/LandingPage';
+import NavBar from './navigation/NavBar';
 import './App.css';
 
 class App extends Component {
@@ -16,13 +14,7 @@ class App extends Component {
                         height: "100vh",
                         width: "100vw"
                     }}>
-                    <AppBar position="static" color="default">
-                        <Toolbar>
-                            <Typography variant="h6" color="inherit">
-                                Spark
-                            </Typography>
-                        </Toolbar>
-                    </AppBar>
+                    <NavBar />
                     <Route exact path="/" component={LandingPage} />
                 </div>
             </BrowserRouter>
