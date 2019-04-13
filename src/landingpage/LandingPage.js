@@ -46,7 +46,9 @@ class LandingPage extends React.Component {
                             style={{
                                 position: "relative",
                                 left: "50px",
-                                top: "50px"
+                                top: "50px",
+                                maxWidth: "100%",
+                                height: "auto"
                             }} />
                     </Grid>
                     <Grid item xs={6}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { storage } from "./Index";
+import placeholder from './placeholder.png'
 
 class FileUpload extends Component {
   constructor(props) {
@@ -72,10 +73,7 @@ class FileUpload extends Component {
         </button>
         <br />
         <img
-          src={
-            this.state.url ||
-            "http://sciencearts.com/home/wp-content/uploads/2015/12/placeholder-400x300.png"
-          }
+          src={placeholder}
           alt="Uploaded Images"
           height="300"
         />
