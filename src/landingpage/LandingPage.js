@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import yellow from '@material-ui/core/colors/yellow';
+import selfie from '../selfie.png';
+import logo from '../logo.png';
 
 const styles = theme => ({
     root: {
@@ -39,20 +41,28 @@ class LandingPage extends React.Component {
         return (
             <div className={classes.root}>
                 <Grid container spacing={24}>
-                    <Grid item xs={6}></Grid>
+                    <Grid item xs={6}>
+                        <img src={selfie} alt="Selfie"
+                            style={{
+                                position: "relative",
+                                left: "50px",
+                                top: "50px"
+                            }} />
+                    </Grid>
                     <Grid item xs={6}
                         style={{
                             textAlign: "center"
                         }}>
-                        <h1
+                        <div
                         style={{
-                            textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,1px 1px 0 #000, 5px 5px rgb(255, 255, 0.25), -5px -5px rgb(255, 255, 0.25), -5px 5px rgb(255, 255, 0.25), 5px -5px rgb(255, 255, 0.25)",
-                            color: "white",
-                            fontSize: "48pt",
-                            padding: "30px",
-                            fontStyle: "bold"}}>
-                            S P A R K
-                        </h1>
+                            position: "relative",
+                            top: "200px"
+                        }}>
+                            <img src={logo} alt="log" 
+                                style={{
+                                    width: "75%",
+                                    height: "75%"
+                                }}/>
                         <br/>
                         <br/>
                         <p
@@ -69,6 +79,8 @@ class LandingPage extends React.Component {
                             className={classNames(classes.margin, classes.cssRoot)}>
                             Get Started
                         </Button>
+                        </div>
+                        
                     </Grid>
                 </Grid>
             </div>
