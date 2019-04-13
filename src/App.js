@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route } from "react-router-dom";
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import LandingPage from './landingpage/LandingPage';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <BrowserRouter>
+                <div 
+                    className="App"
+                    style={{
+                        height: "100vh",
+                        width: "100vw"
+                    }}>
+                    <AppBar position="static" color="default">
+                        <Toolbar>
+                            <Typography variant="h6" color="inherit">
+                                Spark
+                            </Typography>
+                        </Toolbar>
+                    </AppBar>
+                    <Route exact path="/" component={LandingPage} />
+                </div>
+            </BrowserRouter>
+        );
+    }
 }
 
 export default App;
